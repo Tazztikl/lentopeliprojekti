@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="sql.py" defer></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <link href="style.css" rel="stylesheet">
     <script src="lentopokeri.js" defer></script>
     <title>Hei me lennetään!</title>
@@ -61,7 +63,17 @@
                 </header>
                 <table id="weather">
                     <tr>
-                        <td>Runko</td>
+                        <td>
+                            <button onclick="generateRandomNumber()">Runko</button>
+                            <p id="random-number-container"></p>
+
+                            <script>
+                                function generateRandomNumber() {
+                                    var randomNumber = Math.floor(Math.random() * 6);
+                                    document.getElementById("random-number-container").innerHTML = randomNumber;
+                                }
+                            </script>
+                        </td>
                         <td>
                             <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png"
                                  alt="Current weather">
@@ -69,7 +81,7 @@
                         <td>Tankki</td>
                     </tr>
                     <tr>
-                        <td id="airport-temp">  </td>
+                        <td id="airport-temp"></td>
                         <td id="airport-conditions">Cloudy</td>
                         <td id="airport-wind">40m/s</td>
                     </tr>
