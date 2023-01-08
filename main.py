@@ -5,7 +5,7 @@ yhteys = mysql.connector.connect(
     host='127.0.0.1',
     port=3306,
     database='flight_game',
-    user='mariadb.sys',
+    user='root',
     password='salasana',
     autocommit=True
 )
@@ -23,21 +23,21 @@ kestävyys = 0
 kulunutaika = 0
 onnistumismahdollisuus = 33
 
-kanisteri = (4, 1, 3)
-aika_iso_tynnyri = (2, 3, 4)
-Bluetooth_tankki_Norjaan = (5, 5, 1)
+kanisteri = (5, 5, 5)
+aika_iso_tynnyri = (5, 5, 5)
+Bluetooth_tankki_Norjaan = (5, 5, 5)
 
 tankit = (kanisteri, aika_iso_tynnyri, Bluetooth_tankki_Norjaan)
 
-paperilennokki = (3, 5, 1)
-täyttä_metallia_yeah = (1, 3, 5)
-vitun_nopee_lokki = (5, 1, 3)
+paperilennokki = (5, 5, 5)
+täyttä_metallia_yeah = (5, 5, 5)
+vitun_nopee_lokki = (5, 5, 5)
 
 rungot = (paperilennokki, täyttä_metallia_yeah, vitun_nopee_lokki)
 
-Jonnen_viritetty_mopomoottori = (5, 1, 2)
+Jonnen_viritetty_mopomoottori = (5, 5, 5)
 polkumoottori = (1, 3, 4)
-rakettimoottori = (5, 5, 0)
+rakettimoottori = (5, 5, 5)
 
 moottorit = (Jonnen_viritetty_mopomoottori, polkumoottori, rakettimoottori)
 
@@ -102,26 +102,5 @@ while (matkat < 3):
 
 print(f"Koko matkaan meni {kulunutaika} tuntia")
 
-if (kantavuus * 900 < pituudet[matkat]) {
-console.log("Polttoaine ei riittänyt. Kone tippui");
-break;
-}
-if (myrsky) {
-if (kestävyys < 12 & & Math.floor(Math.random() * 3) !== 3) {
-console.log("Koneesi ei kestänyt myrskyä");
-break;
-}
-}
 
-console.log(`Matkaan
-meni ${pituudet[matkat] / (nopeus * 100)}
-tuntia
-`);
-kulunutaika = kulunutaika + pituudet[matkat] / (nopeus * 100);
-matkat + +;
 
-console.log(`Koko
-matkaan
-meni ${kulunutaika}
-tuntia
-`);

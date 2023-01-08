@@ -1,3 +1,5 @@
+import json
+
 import mysql.connector
 
 koordit = [0,0]
@@ -9,8 +11,8 @@ def isotkentät():
     tulos = kursori.fetchall()
     if kursori.rowcount >0 :
         for i in tulos:
-            koordit.append(f"{i[4], i[5]}")
-            print(f"{i[4]} {i[5]}")
+            koordit.append({'x' : i[4], 'y' : i[5]})
+            #print(f"{i[4]} {i[5]}")
     return
 
 yhteys = mysql.connector.connect(
@@ -23,4 +25,8 @@ yhteys = mysql.connector.connect(
 )
 
 isotkentät()
-print(koordit)
+#print(koordit)
+
+json_koordit = json.dumps(koordit)
+
+print(json_koordit)
