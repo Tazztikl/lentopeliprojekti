@@ -4,7 +4,11 @@
 
 
 const API_KEY = '91c48c77162abbfc79f78f194a056dff';
-const city = 'Helsinki';
+let city = 'Helsinki';
+let city2 = 'Prague';
+let city3 = 'Cairo';
+let city4 = 'Bangalore';
+let city5 = 'Seoul';
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
 
 fetch(url)
@@ -16,8 +20,7 @@ fetch(url)
       <h2>${data.name}</h2>
       <p>${weatherConditions}</p>
     `;
-    let EFHK = L.marker([60.316998732, 24.957996168]).addTo(map);
-    EFHK.bindPopup(popupContent);
+     EFHK.bindPopup(popupContent);
   });
 
 const map = L.map('map').setView([60.316998732, 24.957996168], 5)
@@ -33,13 +36,28 @@ let HECA = L.marker([30.119832854, 31.40333172]).addTo(map);
 let VOBL = L.marker([13.192665896, 77.70333052]).addTo(map);
 let RKSI = L.marker([37.4582357, 126.4763689]).addTo(map);
 
+EFHK.addListener('click', function() {
 
+});
 
 EFHK.bindPopup("<b>Helsinki</b><br>");
 LKPR.bindPopup("<b>Praha</b><br>I am a popup.");
 HECA.bindPopup("<b>Kairo</b><br>I am a popup.");
 VOBL.bindPopup("<b>Bangalore</b><br>I am a popup.");
 RKSI.bindPopup("<b>Seoul</b><br>I am a popup.");
+
+const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${city2}&appid=${API_KEY}`;
+fetch(url2)
+  .then(response => response.json())
+  .then(data => {
+
+    const weatherConditions = data.weather[0].description;
+    const popupContent = `
+      <h2>${data.name}</h2>
+      <p>${weatherConditions}</p>
+    `;
+     LKPR.bindPopup(popupContent);
+  });
 
 // global variables
 const apiUrl = 'http://127.0.0.1:5000/';
