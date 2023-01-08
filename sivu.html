@@ -43,7 +43,7 @@
         <div class="boxes">
             <section class="box">
                 <header>
-                    <h2>Game Status</h2>
+                    <h2>Nykyinen sijainti:</h2>
                 </header>
                 <table>
                     <tr>
@@ -64,27 +64,38 @@
                 <table id="weather">
                     <tr>
                         <td>
-                            <button onclick="generateRandomNumber()">Runko</button>
-                            <p id="random-number-container"></p>
+                            <button onclick="generateRandomNumber1()">Runko</button>
+                            <p id="random-number-container">0</p>
 
                             <script>
-                                function generateRandomNumber() {
-                                    var randomNumber = Math.floor(Math.random() * 6);
-                                    document.getElementById("random-number-container").innerHTML = randomNumber;
+                                function generateRandomNumber1() {
+                                    let randomNumber1 = Math.floor(Math.random() * 6);
+                                    document.getElementById("random-number-container").innerHTML = randomNumber1;
                                 }
                             </script>
                         </td>
                         <td>
-                            <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png"
-                                 alt="Current weather">
+                            <button onclick="generateRandomNumber2()">Runko</button>
+                            <p id="random-number-container2">0</p>
+
+                            <script>
+                                function generateRandomNumber2() {
+                                    let randomNumber2 = Math.floor(Math.random() * 6);
+                                    document.getElementById("random-number-container2").innerHTML = randomNumber2;
+                                }
+                            </script>
                         </td>
-                        <td>Tankki</td>
+                        <td><button onclick="generateRandomNumber3()">Runko</button>
+                            <p id="random-number-container3">0</p>
+
+                            <script>
+                                function generateRandomNumber3() {
+                                    let randomNumber3 = Math.floor(Math.random() * 6);
+                                    document.getElementById("random-number-container3").innerHTML = randomNumber3;
+                                }
+                            </script></td>
                     </tr>
-                    <tr>
-                        <td id="airport-temp"></td>
-                        <td id="airport-conditions">Cloudy</td>
-                        <td id="airport-wind">40m/s</td>
-                    </tr>
+
                 </table>
             </section>
             <section class="box">

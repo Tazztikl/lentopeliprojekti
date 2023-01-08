@@ -94,47 +94,47 @@ fetch(url5)
     });
 
 
-// global variables
-const apiUrl = 'http://127.0.0.1:5000/';
-const startLoc = 'EFHK';
-const globalGoals = [];
-const airportMarkers = L.featureGroup().addTo(map);
-
-// icons
-const blueIcon = L.divIcon({className: 'blue-icon'});
-const greenIcon = L.divIcon({className: 'green-icon'});
-
-// form for player name
-document.querySelector('#player-form').addEventListener('submit', function (evt) {
-    evt.preventDefault();
-    const playerName = document.querySelector('#player-input').value;
-    document.querySelector('#player-modal').classList.add('hide');
-    gameSetup(`${apiUrl}newgame?player=${playerName}&loc=${startLoc}`);
-});
-
-// function to fetch data from API
-async function getData(url) {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error('Invalid server input!');
-    const data = await response.json();
-    return data;
-}
+// // global variables
+// const apiUrl = 'http://127.0.0.1:5000/';
+// const startLoc = 'EFHK';
+// const globalGoals = [];
+// const airportMarkers = L.featureGroup().addTo(map);
+//
+// // icons
+// const blueIcon = L.divIcon({className: 'blue-icon'});
+// const greenIcon = L.divIcon({className: 'green-icon'});
+//
+// // form for player name
+// document.querySelector('#player-form').addEventListener('submit', function (evt) {
+//     evt.preventDefault();
+//     const playerName = document.querySelector('#player-input').value;
+//     document.querySelector('#player-modal').classList.add('hide');
+//     gameSetup(`${apiUrl}newgame?player=${playerName}&loc=${startLoc}`);
+// });
+//
+// // function to fetch data from API
+// async function getData(url) {
+//     const response = await fetch(url);
+//     if (!response.ok) throw new Error('Invalid server input!');
+//     const data = await response.json();
+//     return data;
+// }
 
 // function to update game status
-function updateStatus(status) {
-    document.querySelector('#player-name').innerHTML = `Player: ${status.name}`;
-    document.querySelector('#consumed').innerHTML = status.co2.consumed;
-    document.querySelector('#budget').innerHTML = status.co2.budget;
-}
-
-// function to show weather at selected airport
-function showWeather(airport) {
-    document.querySelector('#airport-name').innerHTML = `Weather at ${airport.name}`;
-    document.querySelector('#airport-temp').innerHTML = `${airport.weather.temp}°C`;
-    document.querySelector('#weather-icon').src = airport.weather.icon;
-    document.querySelector('#airport-conditions').innerHTML = airport.weather.description;
-    document.querySelector('#airport-wind').innerHTML = `${airport.weather.wind.speed}m/s`;
-}
+// function updateStatus(status) {
+//     document.querySelector('#player-name').innerHTML = `Player: ${status.name}`;
+//     document.querySelector('#consumed').innerHTML = status.co2.consumed;
+//     document.querySelector('#budget').innerHTML = status.co2.budget;
+// }
+//
+// // function to show weather at selected airport
+// function showWeather(airport) {
+//     document.querySelector('#airport-name').innerHTML = `Weather at ${airport.name}`;
+//     document.querySelector('#airport-temp').innerHTML = `${airport.weather.temp}°C`;
+//     document.querySelector('#weather-icon').src = airport.weather.icon;
+//     document.querySelector('#airport-conditions').innerHTML = airport.weather.description;
+//     document.querySelector('#airport-wind').innerHTML = `${airport.weather.wind.speed}m/s`;
+// }
 
 // function to check if any goals have been reached
 // function checkGoals(meets_goals) {
