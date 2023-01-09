@@ -56,6 +56,7 @@ nykyinentankki = random.randint(0, 1)
 nopeus = moottorit[nykyinenmoottori][0] + rungot[nykyinenrunko][0] + tankit[nykyinentankki][0]
 kantavuus = moottorit[nykyinenmoottori][1] + rungot[nykyinenrunko][1] + tankit[nykyinentankki][1]
 kestävyys = moottorit[nykyinenmoottori][2] + rungot[nykyinenrunko][2] + tankit[nykyinentankki][2]
+
 print("Aloitat lentokoneella jonka runko on %s, moottorina %s ja tankkina toimii %s." % (
     runkonimet[nykyinenrunko], moottorinimet[nykyinenmoottori], tankkinimet[nykyinentankki]))
 print(f"nopeus: {nopeus}")

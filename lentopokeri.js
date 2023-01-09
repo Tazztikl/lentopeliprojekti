@@ -35,11 +35,11 @@ let VOBL = L.marker([13.192665896, 77.70333052]).addTo(map);
 let RKSI = L.marker([37.4582357, 126.4763689]).addTo(map);
 
 
-EFHK.bindPopup("<b>Helsinki</b><br>");
-LKPR.bindPopup("<b>Praha</b><br>I am a popup.");
-HECA.bindPopup("<b>Kairo</b><br>I am a popup.");
-VOBL.bindPopup("<b>Bangalore</b><br>I am a popup.");
-RKSI.bindPopup("<b>Seoul</b><br>I am a popup.");
+EFHK.bindPopup("<b>Helsinki</b>");
+LKPR.bindPopup("<b>Praha</b>");
+HECA.bindPopup("<b>Kairo</b>");
+VOBL.bindPopup("<b>Bangalore</b>");
+RKSI.bindPopup("<b>Seoul</b>");
 
 const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${city2}&appid=${API_KEY}`;
 fetch(url2)
